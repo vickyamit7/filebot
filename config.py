@@ -11,35 +11,35 @@ load_dotenv()
 TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
 
 #Your API ID from my.telegram.org
-APP_ID = int(os.environ.get("APP_ID", "24835200"))
+APP_ID = int(os.environ.get("APP_ID", "9698652"))
 
 #Your API Hash from my.telegram.org
-API_HASH = os.environ.get("API_HASH", "292a0429d414275f4568b0a759f6ab98")
+API_HASH = os.environ.get("API_HASH", "b354710ab18b84e00b65c62ba7a9c043")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002057410262"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002425471937"))
 
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", "2125687935"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "7135536234"))
 
 #Port
 PORT = os.environ.get("PORT", "8080")
 
 #Database 
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://Vicky:2003@cluster0.ti5sfrk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DB_NAME = os.environ.get("DATABASE_NAME", "Vicky")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://vicky15:2003@cluster0.ytsve.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DB_NAME = os.environ.get("DATABASE_NAME", "vicky15")
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002441144381"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002315029193"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_PIC = os.environ.get("START_PIC","")
+START_PIC = os.environ.get("START_PIC","https://envs.sh/5yV.jpg")
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "").split()):
+    for x in (os.environ.get("ADMINS", "2125687935 6171331340 1990180816 1936055439").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
@@ -54,9 +54,9 @@ CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
 PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "True") == "True" else False
 
 # Auto delete time in seconds.
-AUTO_DELETE_TIME = int(os.getenv("AUTO_DELETE_TIME", "0"))
+AUTO_DELETE_TIME = int(os.getenv("AUTO_DELETE_TIME", "1800"))
 AUTO_DELETE_MSG = os.environ.get("AUTO_DELETE_MSG", "This file will be automatically deleted in {time} seconds. Please ensure you have saved any necessary content before this time.")
-AUTO_DEL_SUCCESS_MSG = os.environ.get("AUTO_DEL_SUCCESS_MSG", "Your file has been successfully deleted. Thank you for using our service. ✅")
+AUTO_DEL_SUCCESS_MSG = os.environ.get("AUTO_DEL_SUCCESS_MSG", "Your file has been successfully deleted ✅")
 
 #Set true if you want Disable your Channel Posts Share button
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True'
@@ -65,7 +65,7 @@ BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
 USER_REPLY_TEXT = "❌Don't send me messages directly I'm only File Share bot!"
 
 ADMINS.append(OWNER_ID)
-ADMINS.append(1250450587)
+ADMINS.append(7135536234)
 
 LOG_FILE_NAME = "filesharingbot.txt"
 
